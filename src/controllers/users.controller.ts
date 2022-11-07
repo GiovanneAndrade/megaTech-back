@@ -1,4 +1,4 @@
-import * as allCategory from "../repositories/category.repository";
+import * as allCategory from "../repositories/users.repository";
 import { Request, Response } from "express";
 
 async function postCategoryController(req: Request, res: Response) {
