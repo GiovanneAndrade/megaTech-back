@@ -5,6 +5,7 @@ import userRouter from "./routers/users.router";
 import categoriesRouter from "./routers/categories.router";
 import addressRouter from "./routers/address.router";
 import favoritiesRouter from "./routers/favorities.router";
+import resquestRouter from "./routers/request.router";
 
 
 
@@ -15,6 +16,7 @@ app.use(userRouter);
 app.use(categoriesRouter);
 app.use(addressRouter);
 app.use(favoritiesRouter);
+app.use(resquestRouter);
 app.use(errorHandler);
 
 app.listen(5000, () => {
