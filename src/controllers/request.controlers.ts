@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import * as allRequest from "../repositories/request.resositories"
+import * as allRequest from "../repositories/request.resositories";
 
 async function postRequestController(req: Request, res: Response) {
-  const {         
+  const {
     total,
-    message,  
-    addressId ,
-    products  
+    message,
+    addressId,
+    products,
   }: {
     total: number;
     message: string;
@@ -14,20 +14,20 @@ async function postRequestController(req: Request, res: Response) {
     products: any;
   } = req.body;
 
-  const result = await allRequest.postRequestRepository({
+  const summary = await allRequest.postRequestRepository({
     total,
-    message,  
+    message,
     addressId,
-    products
+    products,
   });
+ 
+  return res.send({summary, products});
+}
+
+async function getRequestController(req: Request, res: Response) {
+  const result = await allRequest.getRequestRepository();
 
   return res.send(result);
 }
 
-async function getRequestController(req: Request, res: Response){
-  const result = await allRequest.getRequestRepository()
-
-  return res.send(result);
-} 
-
-export { postRequestController, getRequestController};
+export { postRequestController, getRequestController };

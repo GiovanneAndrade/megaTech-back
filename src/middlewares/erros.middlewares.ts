@@ -9,5 +9,6 @@ export default function errorHandler(
 ) {
   const statusCode = error.statusCode ?? 500
   const message = error.statusCode ? error.message : 'Internal Server Error'
+  console.log(error)
   return res.status(statusCode).json({ message })
 }

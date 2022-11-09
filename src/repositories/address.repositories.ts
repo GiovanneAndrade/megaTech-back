@@ -45,7 +45,7 @@ async function postAddressRepository({
 async function getAddressRepository() {
   const result = await prisma.address.findMany({
     where: {
-      userId: 11,
+      userId: 22,
     },
     select: {
       id: true,

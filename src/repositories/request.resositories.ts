@@ -13,12 +13,13 @@ async function postRequestRepository({
   addressId: number;
   products: any;
 }) {
+  console.log(products);
   const result = await prisma.requests.create({
     data: {
       total: total,
       message: message,
       addressId: addressId,
-      userId: 19,
+      userId: 22,
       products: {
         connect: products,
       },
@@ -26,17 +27,25 @@ async function postRequestRepository({
   });
   return result;
 }
+
 async function getRequestRepository() {
   const result = await prisma.requests.findMany({
     where: {
-      userId: 19,
+      userId: 22,
     },
     select: {
       id: true,
       message: true,
       total: true,
       created_at: true,
-      products: true,
+      products: {
+        select: {
+          id: true,
+          name: true,
+          price: true,
+        },
+      },
+      Address: true
     },
   });
 
