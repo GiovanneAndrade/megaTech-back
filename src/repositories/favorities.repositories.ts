@@ -34,7 +34,7 @@ async function postFavoritiesCreateRepository({ user }: { user: number }) {
 async function getFavoritiesRepository() {
   const result = await prisma.favorities.findMany({
     where: {
-      userId: 22,
+      userId: 26,
     },
     select: {
       products: true,

@@ -6,7 +6,7 @@ async function getProductsRepository() {
   const result = await prisma.products.findMany({
     orderBy: [
       {
-        favorities: {
+        requests: {
           _count: "desc",
         },
       },
@@ -20,7 +20,7 @@ async function getProductsRepository() {
       Assessments: true,
       _count: {
         select: {
-          favorities: true,
+          requests: true,
         },
       },
     },
@@ -29,4 +29,14 @@ async function getProductsRepository() {
   return result;
 }
 
-export { getProductsRepository };
+
+async function getProductsHotRepository() {
+  const result = await prisma.products.findMany({
+    orderBy:{
+      price:"asc"
+    }
+  });
+
+  return result;
+}
+export { getProductsRepository, getProductsHotRepository };

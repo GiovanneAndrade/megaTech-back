@@ -19,7 +19,7 @@ async function postRequestRepository({
       total: total,
       message: message,
       addressId: addressId,
-      userId: 22,
+      userId: 26,
       products: {
         connect: products,
       },
@@ -31,7 +31,7 @@ async function postRequestRepository({
 async function getRequestRepository() {
   const result = await prisma.requests.findMany({
     where: {
-      userId: 22,
+      userId: 26,
     },
     select: {
       id: true,

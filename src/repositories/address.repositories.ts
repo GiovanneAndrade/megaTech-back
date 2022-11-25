@@ -56,6 +56,7 @@ async function getAddressRepository() {
       district: true,
       name_recipient: true,
       number: true,
+      primary: true,
       uf: true,
       user: {
         select: {
