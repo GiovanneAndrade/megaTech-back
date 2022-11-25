@@ -82,6 +82,7 @@ model Address {
   user           User       @relation(fields: [userId], references: [id])
   userId         Int
   request        Requests[]
+  primary        Boolean?
 
   @@map("address")
 }
