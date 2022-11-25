@@ -6,4 +6,9 @@ async function getProductsController(req: Request, res: Response) {
 
   return res.send(result);
 }
-export { getProductsController };
+async function getProductsHotController(req: Request, res: Response) {
+  const result = await allProducts.getProductsHotRepository();
+
+  return res.send(result);
+}
+export { getProductsController, getProductsHotController };
