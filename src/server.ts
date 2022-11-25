@@ -1,4 +1,5 @@
 import "express-async-errors";
+import cors from 'cors';
 import express from "express";
 import errorHandler from "./middlewares/erros.middlewares";
 import userRouter from "./routers/users.router";
@@ -11,6 +12,7 @@ import productsRouter from "./routers/products.router";
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use(userRouter);
 app.use(categoriesRouter);
@@ -20,6 +22,6 @@ app.use(resquestRouter);
 app.use(productsRouter);
 app.use(errorHandler);
 
-app.listen(5000, () => {
+app.listen(4001, () => {
   console.log("listening on port 👌");
 });
