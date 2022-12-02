@@ -21,7 +21,7 @@ async function postAddressController(req: Request, res: Response) {
     city: string;
     uf: string;
     complement: string;
-    userId: number
+    userId: number;
   } = req.body;
 
   const result = await allAddress.postAddressRepository({
@@ -33,16 +33,37 @@ async function postAddressController(req: Request, res: Response) {
     city,
     uf,
     complement,
-    userId
+    userId,
   });
 
   return res.send(result);
 }
 
-async function getAddressController(req: Request, res: Response){
-  const result = await allAddress.getAddressRepository()
+async function getAddressController(req: Request, res: Response) {
+  const result = await allAddress.getAddressRepository();
+
+  return res.send(result);
+}
+async function deleteAddressController(req: Request, res: Response) {
+  const id = req.params.id;
+  const result = await allAddress.deleteAddressRepository({ id });
+
+  return res.send(result);
+}
+async function updateAddressController(req: Request, res: Response) {
+  const { currentAddress, previousAddress } = req.params;
+  console.log(req.params)
+  const result = await allAddress.updateAddressRepository({
+    currentAddress,
+    previousAddress,
+  });
 
   return res.send(result);
 }
 
-export { postAddressController, getAddressController };
+export {
+  postAddressController,
+  getAddressController,
+  deleteAddressController,
+  updateAddressController,
+};
