@@ -70,5 +70,48 @@ async function getAddressRepository() {
 
   return result;
 }
+async function deleteAddressRepository({ id }: { id: any }) {
+  const ToId = Number(id);
+  const result = await prisma.address.delete({
+    where: {
+      id: ToId,
+    },
+  });
 
-export { postAddressRepository, getAddressRepository };
+  return result;
+}
+
+async function updateAddressRepository({
+  currentAddress,
+  previousAddress,
+}: {
+  currentAddress: any;
+  previousAddress: any;
+}) {
+  const  IdCurrent = Number(currentAddress);
+  const  IdPrevious = Number(previousAddress);
+  const result = await prisma.address.update({
+    where: {
+      id: IdCurrent,
+    },
+    data: {
+      primary: true,
+    },
+  });
+  await prisma.address.update({
+    where: {
+      id: IdPrevious,
+    },
+    data: {
+      primary: false,
+    },
+  });
+
+  return result;
+}
+export {
+  postAddressRepository,
+  getAddressRepository,
+  deleteAddressRepository,
+  updateAddressRepository,
+};
