@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { getFavoritiesController, postFavoritiesController } from "../controllers/favorities.controllers";
- 
- 
+import {
+  getFavoritiesController,
+  postFavoritiesController,
+} from "../controllers/index";
 
-const router = Router();
+const favoritiesRouter = Router();
+favoritiesRouter
+  .post("/favorities", postFavoritiesController)
+  .get("/favorities", getFavoritiesController);
 
-router.post("/favorities", postFavoritiesController);
-router.get("/favorities", getFavoritiesController);
-
-export default router;
+export default favoritiesRouter;
