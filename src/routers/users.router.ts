@@ -1,9 +1,7 @@
 import { Router } from "express";
-import {  postCategoryController } from "../controllers/users.controller";
+import { postCategoryController } from "../controllers/index";
 
-const router = Router();
+const userRouter = Router();
+userRouter.post("/user", postCategoryController);
 
-router.post("/user", postCategoryController);
-
-
-export default router;
+export default userRouter;
