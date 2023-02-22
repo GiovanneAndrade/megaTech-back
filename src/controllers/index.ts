@@ -1,0 +1,6 @@
+export * from "./address.controllers"
+export * from "./categories.controllers"
+export * from "./favorities.controllers"
+export * from "./products.controllers"
+export * from "./users.controller"
+export * from "./request.controlers"
