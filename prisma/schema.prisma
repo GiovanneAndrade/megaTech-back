@@ -71,10 +71,10 @@ model Requests {
 
 model Address {
   id             Int        @id @default(autoincrement())
-  cep            Decimal
+  cep            Int
   address        String
   name_recipient String
-  number         Decimal
+  number         Int
   district       String
   city           String
   uf             String
@@ -84,5 +84,8 @@ model Address {
   request        Requests[]
   primary        Boolean?
 
+
   @@map("address")
 }
+
+
