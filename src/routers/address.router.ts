@@ -4,13 +4,13 @@ import {
   getAddressController,
   postAddressController,
   updateAddressController,
-} from "../controllers/address.controllers";
+} from "../controllers/index";
 
-const router = Router();
+const addressRouter = Router();
+addressRouter
+  .post("/address", postAddressController)
+  .get("/address", getAddressController)
+  .delete("/address/:id", deleteAddressController)
+  .put("/address/:currentAddress/:previousAddress", updateAddressController);
 
-router.post("/address", postAddressController);
-router.get("/address", getAddressController);
-router.delete("/address/:id", deleteAddressController);
-router.put("/address/:currentAddress/:previousAddress", updateAddressController);
-
-export default router;
+export default addressRouter;
