@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { getRequestController, postRequestController } from "../controllers/request.controlers";
+import { getRequestController, postRequestController } from "../controllers/index";
  
 
-const router = Router();
+const resquestRouter = Router();
+resquestRouter
+.post("/request", postRequestController)
+.get("/request", getRequestController)
 
-router.post("/request", postRequestController);
-router.get("/request", getRequestController);
 
-
-export default router;
+export default resquestRouter;
