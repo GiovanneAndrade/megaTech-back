@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { postCategoryController } from "../controllers/index";
+import { postUsersController } from "../controllers/index";
 
 const userRouter = Router();
-userRouter.post("/user", postCategoryController);
+userRouter.post("/user", postUsersController);
 
 export default userRouter;
