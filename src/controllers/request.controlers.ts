@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import * as allRequest from "../repositories/request.resositories";
+import { InternalServerError } from "../erros/erros";
+import * as allRequest from "../services/index";
 
 async function postRequestController(req: Request, res: Response) {
   const {
@@ -13,14 +14,11 @@ async function postRequestController(req: Request, res: Response) {
     addressId: number;
     products: any;
   } = req.body;
-
-  const summary = await allRequest.postRequestRepository({
-    total,
-    message,
-    addressId,
-    products,
-  });
  
+  const lastRequest = req.body;
+  try {
+    const summary = await allRequest.postRequestService(lastRequest);
+
   return res.send({summary, products});
 }
 
