@@ -1,14 +1,23 @@
 import { Request, Response } from "express";
-import * as allProducts from "../repositories/products.repositories";
+import { InternalServerError } from "../erros/erros";
+import * as allProducts from "../services/index";
 
 async function getProductsController(req: Request, res: Response) {
-  const result = await allProducts.getProductsRepository();
-
-  return res.send(result);
+  try {
+    const result = await allProducts.getProductsService();
+    return res.send(result);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
-async function getProductsHotController(req: Request, res: Response) {
-  const result = await allProducts.getProductsHotRepository();
 
-  return res.send(result);
+
+async function getProductsHotController(req: Request, res: Response) {
+  try {
+    const result = await allProducts.getProductsHotService();
+    return res.send(result);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 export { getProductsController, getProductsHotController };
