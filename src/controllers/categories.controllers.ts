@@ -1,10 +1,15 @@
 import { Request, Response } from "express";
-import * as allCategory from "../repositories/categories.repositories";
+import { InternalServerError } from "../erros/erros";
+import * as allCategory from "../services/index";
 
 async function getCategoryController(req: Request, res: Response) {
-  const result = await allCategory.getCategoryRepository();
-
-  return res.send(result);
+  try {
+    const result = await allCategory.getCategoryService();
+    return res.send(result);
+    
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
 export { getCategoryController };
