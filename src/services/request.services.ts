@@ -9,6 +9,10 @@ async function postRequestService( lastRequest:Request) {
   return result
 }
 
+async function getRequestService() {
+  const result = await allRequest.getRequestRepository();
 
+  return result
+}
 
-export { postRequestService };
+export { postRequestService, getRequestService };
