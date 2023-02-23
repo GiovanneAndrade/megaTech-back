@@ -1,27 +1,27 @@
 import { Request, Response } from "express";
-import * as allFavorities from "../repositories/favorities.repositories";
+import { InternalServerError } from "../erros/erros";
+import { Favorities } from "../protocols";
+import * as allFavorities from "../services/index";
 
 async function postFavoritiesController(req: Request, res: Response) {
-  const {
-    productId,
-    userId,
-  }: {
-    productId: number;
-    userId: number;
-  } = req.body;
-
-  await allFavorities.postFavoritiesRepository({
-    productId,
-    userId,
-  });
-
-  return res.sendStatus(201);
+ 
+  const favorities = req.body as Favorities;
+  try {
+    await allFavorities.postFavoritiesService(favorities);
+    return res.sendStatus(201);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
 async function getFavoritiesController(req: Request, res: Response) {
-  const result = await allFavorities.getFavoritiesRepository();
-  const { products } = result[0];
-  return res.send(products);
+  try {
+    const result = await allFavorities.getFavoritiesService();
+    const { products } = result[0];
+    return res.send(products);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
 export { postFavoritiesController, getFavoritiesController };
