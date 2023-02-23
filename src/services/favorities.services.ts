@@ -6,6 +6,9 @@ async function postFavoritiesService(favorities: Favorities) {
   return result;
 }
 
+async function getFavoritiesService() {
+  const result = await allFavorities.getFavoritiesRepository();
+  return result;
+}
 
-
-export {  postFavoritiesService };
+export { getFavoritiesService, postFavoritiesService };
