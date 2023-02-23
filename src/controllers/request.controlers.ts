@@ -3,29 +3,24 @@ import { InternalServerError } from "../erros/erros";
 import * as allRequest from "../services/index";
 
 async function postRequestController(req: Request, res: Response) {
-  const {
-    total,
-    message,
-    addressId,
-    products,
-  }: {
-    total: number;
-    message: string;
-    addressId: number;
-    products: any;
-  } = req.body;
  
   const lastRequest = req.body;
   try {
     const summary = await allRequest.postRequestService(lastRequest);
 
-  return res.send({summary, products});
+    return res.send( summary );
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
 async function getRequestController(req: Request, res: Response) {
-  const result = await allRequest.getRequestRepository();
-
-  return res.send(result);
+  try {
+    const result = await allRequest.getRequestService();
+    return res.send(result);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
 export { postRequestController, getRequestController };
