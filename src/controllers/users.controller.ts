@@ -1,32 +1,19 @@
 import { Request, Response } from "express";
-import * as allCategory from "../repositories/users.repository";
-import * as allFavorities from "../repositories/favorities.repositories";
+import * as allUsers from "../services/index";
 
-async function postCategoryController(req: Request, res: Response) {
-  const {
-    name,
-    email,
-    password,
-    cpf,
-    phone,
-  }: {
-    name: string;
-    email: string;
-    password: string;
-    cpf: string;
-    phone: number;
-  } = req.body;
-  const result = await allCategory.postCategoryRepository({
-    name,
-    email,
-    password,
-    cpf,
-    phone,
-  });
-  const user = result.id;
-  await allFavorities.postFavoritiesCreateRepository({ user });
+import { InternalServerError } from "../erros/erros";
+import { User } from "../protocols";
 
-  return res.send(result);
+async function postUsersController(req: Request, res: Response) {
+  const user = req.body as User;
+
+  try {
+    const result = await allUsers.postUsersService(user);
+ 
+    return res.send(result);
+  } catch (error) {
+    return InternalServerError(res);
+  }
 }
 
-export { postCategoryController };
+export { postUsersController };
