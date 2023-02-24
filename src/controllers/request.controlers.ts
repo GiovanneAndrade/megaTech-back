@@ -8,6 +8,9 @@ async function postRequestController(req: Request, res: Response) {
   const lastRequest = req.body;
   try {
     const summary = await allRequest.postRequestService(lastRequest);
+    return res.send(summary);
+  } catch (error: any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
 
     return res.send( summary );
   } catch (error) {
