@@ -7,6 +7,6 @@ import {
 const favoritiesRouter = Router();
 favoritiesRouter
   .post("/favorities", postFavoritiesController)
-  .get("/favorities", getFavoritiesController);
+  .get("/favorities/:id", getFavoritiesController);
 
 export default favoritiesRouter;

@@ -5,7 +5,7 @@ import { getRequestController, postRequestController } from "../controllers/inde
 const resquestRouter = Router();
 resquestRouter
 .post("/request", postRequestController)
-.get("/request", getRequestController)
+.get("/request/:id", getRequestController)
 
 
 export default resquestRouter;
