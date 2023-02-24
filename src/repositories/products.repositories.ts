@@ -39,4 +39,16 @@ async function getProductsHotRepository() {
 
   return result;
 }
-export { getProductsRepository, getProductsHotRepository };
+
+async function consultProductsHotRepository(productId:number) {
+const id= productId
+ 
+  const result = await prisma.products.findMany({
+    where:{
+      id:productId
+    }
+  });
+
+  return result;
+}
+export { getProductsRepository, getProductsHotRepository,consultProductsHotRepository };
