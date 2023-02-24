@@ -3,6 +3,7 @@ import { InternalServerError } from "../erros/erros";
 import * as allRequest from "../services/index";
 
 async function postRequestController(req: Request, res: Response) {
+  const lastRequest = req.body as Requests;
  
   const lastRequest = req.body;
   try {
