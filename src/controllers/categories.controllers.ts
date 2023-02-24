@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { InternalServerError } from "../erros/erros";
-import * as allCategory from "../services/index";
+import * as allCategory from "../services";
 
 async function getCategoryController(req: Request, res: Response) {
   try {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as allUsers from "../services/index";
+import * as allUsers from "../services";
 
 import { InternalServerError } from "../erros/erros";
 import { User } from "../protocols";
@@ -9,7 +9,6 @@ async function postUsersController(req: Request, res: Response) {
 
   try {
     const result = await allUsers.postUsersService(user);
- 
     return res.send(result);
   } catch (error) {
     return InternalServerError(res);

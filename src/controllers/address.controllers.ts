@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import * as allAddressService from "../services/index";
-import { Andress } from "../protocols/index";
+import * as allAddressService from "../services";
+import { Andress } from "../protocols";
 import { 
   ifNotFoundError, InternalServerError,  ifUnauthoredError
 } from "../erros/erros";

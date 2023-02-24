@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { InternalServerError } from "../erros/erros";
-import * as allProducts from "../services/index";
+import * as allProducts from "../services";
 
 async function getProductsController(req: Request, res: Response) {
   try {
