@@ -9,7 +9,9 @@ async function postFavoritiesController(req: Request, res: Response) {
   try {
     await allFavorities.postFavoritiesService(favorities);
     return res.sendStatus(201);
-  } catch (error) {
+  } catch (error:any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
+
     return InternalServerError(res);
   }
 }
@@ -19,7 +21,9 @@ async function getFavoritiesController(req: Request, res: Response) {
     const result = await allFavorities.getFavoritiesService();
     const { products } = result[0];
     return res.send(products);
-  } catch (error) {
+  } catch (error:any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
+    
     return InternalServerError(res);
   }
 }
