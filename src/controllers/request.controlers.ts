@@ -22,7 +22,9 @@ async function getRequestController(req: Request, res: Response) {
   try {
     const result = await allRequest.getRequestService();
     return res.send(result);
-  } catch (error) {
+  } catch (error: any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
+
     return InternalServerError(res);
   }
 }
