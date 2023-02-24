@@ -1,7 +1,4 @@
-export type ApplicationError = {
-  name: string;
-  message: string;
-};
+
 export type Andress = {
   cep: number;
   address: string;
@@ -10,6 +7,9 @@ export type Andress = {
   district: string;
   city: string;
   uf: string;
-  complement:string | any;
+  complement: string | any;
   userId: number;
 };
+
+
+
