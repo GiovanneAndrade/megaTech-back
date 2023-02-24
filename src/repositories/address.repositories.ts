@@ -1,52 +1,30 @@
 import { PrismaClient } from "@prisma/client";
+import { Andress } from "../protocols/address.protocols";
 
 const prisma = new PrismaClient();
 
-async function postAddressRepository({
-  cep,
-  address,
-  name_recipient,
-  number,
-  district,
-  city,
-  uf,
-  complement,
-  userId,
-}: {
-  cep: number;
-  address: string;
-  name_recipient: string;
-  number: number;
-  district: string;
-  city: string;
-  uf: string;
-  complement: string;
-  userId: number;
-}) {
-  const result = await prisma.address.create({
+async function postAddressRepository(andress: Andress): Promise<Andress> {
+  return await prisma.address.create({
     data: {
-      cep: cep,
-      address: address,
-      name_recipient: name_recipient,
-      number: number,
-      district: district,
-      city: city,
-      uf: uf,
-      complement: complement,
+      cep: Number(andress.cep),
+      address: andress.address,
+      name_recipient: andress.name_recipient,
+      number: Number(andress.number),
+      district: andress.district,
+      city: andress.city,
+      uf: andress.uf,
+      complement: andress.complement,
       user: {
         connect: {
-          id: userId,
+          id: andress.userId,
         },
       },
     },
   });
-  return result;
 }
+
 async function getAddressRepository() {
-  const result = await prisma.address.findMany({
-    where: {
-      userId: 22,
-    },
+  return await prisma.address.findMany({
     select: {
       id: true,
       address: true,
@@ -67,18 +45,22 @@ async function getAddressRepository() {
       },
     },
   });
-
-  return result;
 }
-async function deleteAddressRepository({ id }: { id: any }) {
-  const ToId = Number(id);
-  const result = await prisma.address.delete({
+
+async function consultAddressRepository(id: any) {
+  return await prisma.address.findFirst({
     where: {
-      id: ToId,
+      id: Number(id),
     },
   });
+}
 
-  return result;
+async function deleteAddressRepository(id: any) {
+  return await prisma.address.delete({
+    where: {
+      id: Number(id),
+    },
+  });
 }
 
 async function updateAddressRepository({
@@ -88,11 +70,9 @@ async function updateAddressRepository({
   currentAddress: any;
   previousAddress: any;
 }) {
-  const  IdCurrent = Number(currentAddress);
-  const  IdPrevious = Number(previousAddress);
   const result = await prisma.address.update({
     where: {
-      id: IdCurrent,
+      id: Number(currentAddress),
     },
     data: {
       primary: true,
@@ -100,7 +80,7 @@ async function updateAddressRepository({
   });
   await prisma.address.update({
     where: {
-      id: IdPrevious,
+      id: Number(previousAddress),
     },
     data: {
       primary: false,
@@ -114,4 +94,5 @@ export {
   getAddressRepository,
   deleteAddressRepository,
   updateAddressRepository,
+  consultAddressRepository,
 };
