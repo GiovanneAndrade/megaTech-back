@@ -3,11 +3,10 @@ import * as allAddress from "../repositories/index";
 import { Andress } from "../protocols/index";
 import { consultUser } from "../repositories/index";
 import { conflictError, NotFoundError, UnauthoredError } from "../erros/erros";
+import { consultUserService } from "./consultUser.services";
 
 async function postAddressServices(andress: Andress): Promise<Andress> {
-  const userId = await consultUser(Number(andress.userId));
-  if (!userId) throw new NotFoundError("usuario não existe");
-
+  await consultUserService(andress.userId)
   const result = await allAddress.postAddressRepository(andress);
   return result;
 } 
