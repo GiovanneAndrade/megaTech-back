@@ -1,28 +1,23 @@
 import { PrismaClient } from "@prisma/client";
+import { Favorities } from "../protocols";
 
 const prisma = new PrismaClient();
 
-async function postFavoritiesRepository({
-  productId,
-  userId,
-}: {
-  productId: number;
-  userId: number;
-}) {
+async function postFavoritiesRepository(favorities: Favorities) {
   const result = await prisma.favorities.update({
     where: {
-      userId: userId,
+      userId: favorities.userId,
     },
     data: {
       products: {
-        connect: { id: productId },
+        connect: favorities.productId 
       },
     },
   });
   return result;
 }
 
-async function postFavoritiesCreateRepository({ user }: { user: number }) {
+async function postFavoritiesCreateRepository( user: number ) {
   const order = await prisma.favorities.create({
     data: {
       userId: user,
@@ -55,7 +50,6 @@ async function getFavoritiesRepository(userId:number) {
       products: true,
     },
   });
-
   return result;
 }
 
