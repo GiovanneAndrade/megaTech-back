@@ -1,43 +1,40 @@
 import { PrismaClient } from "@prisma/client";
+import { Requests } from "../protocols";
 
 const prisma = new PrismaClient();
 
-async function postRequestRepository({
-  total,
-  message,
-  addressId,
-  products,
-}: {
-  total: number;
-  message: string;
-  addressId: number;
-  products: any;
-}) {
-  console.log(products);
+async function postRequestRepository(lastRequest:Requests) {
   const result = await prisma.requests.create({
     data: {
-      total: total,
-      message: message,
-      addressId: addressId,
-      userId: 26,
+      total: lastRequest.total,
+      message: lastRequest.message,
+      addressId: lastRequest.addressId,
+      userId: lastRequest.userId,
       products: {
-        connect: products,
+        connect: lastRequest.products,
       },
     },
   });
   return result;
 }
 
-async function getRequestRepository() {
-  const result = await prisma.requests.findMany({
+async function getRequestRepository(id:number) {
+  return await prisma.requests.findMany({
     where: {
-      userId: 26,
+      userId: id,
     },
     select: {
       id: true,
       message: true,
       total: true,
       created_at: true,
+      user:{
+        select:{
+          id:true,
+          name:true,
+          email:true
+        }
+      },
       products: {
         select: {
           id: true,
@@ -48,8 +45,6 @@ async function getRequestRepository() {
       Address: true
     },
   });
-
-  return result;
 }
 
 export { postRequestRepository, getRequestRepository };
