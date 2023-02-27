@@ -25,7 +25,12 @@ async function postCategoryRepository({
     },
   });
  
-  return result;
+async function consultUser(userId: any) {
+  return await prisma.user.findFirst({
+    where: {
+      id: userId,
+    },
+  });
 }
 
 export { postCategoryRepository };
