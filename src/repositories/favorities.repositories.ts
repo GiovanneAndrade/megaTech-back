@@ -31,10 +31,25 @@ async function postFavoritiesCreateRepository({ user }: { user: number }) {
   return order;
 }
 
-async function getFavoritiesRepository() {
+async function removeFavoritiesRepository(favorities: Favorities) {
+  const result = await prisma.favorities.update({
+    where: {
+      userId: favorities.userId,
+    },
+    data: {
+      products: {
+        disconnect: favorities.productId 
+      },
+    },
+  });
+
+  return result;
+}
+
+async function getFavoritiesRepository(userId:number) {
   const result = await prisma.favorities.findMany({
     where: {
-      userId: 26,
+      userId: userId,
     },
     select: {
       products: true,
@@ -48,4 +63,5 @@ export {
   postFavoritiesRepository,
   getFavoritiesRepository,
   postFavoritiesCreateRepository,
+  removeFavoritiesRepository
 };
