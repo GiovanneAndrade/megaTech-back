@@ -6,8 +6,6 @@ Este é um aplicativo full-stack de comércio eletrônico com recursos de carrin
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
-
 ### 📋 Pré-requisitos
 
 De que coisas você precisa para instalar o software e como instalá-lo?
@@ -83,8 +81,16 @@ npm run dev
 ## delete `/address/:id`
 - deve enviar o id do endereço a ser deletado
 - deve retornar um exemplo abaixo:
+
 ```
  status 200 OK
+```
+- deve retornar error se o id não existe:
+```json
+{
+  "error": "Error",
+  "message": "Address não existe"
+}
 ```
 
 ## put `/address/:currentAddress/:previousAddress`
@@ -106,7 +112,6 @@ npm run dev
     "userId": "number",
     "primary": true
 }
-
 ```
 
 ## ⚙️ Executando os testes
@@ -139,8 +144,6 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
 
 ## 🎁 Expressões de gratidão
-
-- Conte a outras pessoas sobre este projeto 📢;
-- Convide alguém da equipe para uma cerveja 🍺;
-- Um agradecimento publicamente 🫂;
+- Este projeto foi minha introdução ao Prisma e TypeScript e foi crucial para aprimorar minhas habilidades em projetos back-end. Através dele, aprendi a implementar recursos como autenticação de usuário e gerenciamento de banco de dados eficiente, testes com jest e supertestes, criando uma aplicação escalável e segura. Estou muito satisfeito com o resultado e confiante de que isso demonstra minhas habilidades como desenvolvedor de back-end.
+- Sou grato aos meus tutores e professores, bem como a toda equipe da Driven que participou desse processo. Eles foram essenciais para me guiar e me direcionar como uma bússola.
 - etc.
