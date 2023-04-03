@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-import * as allAddress from "../repositories/index";
-import { Andress } from "../protocols/index";
-import { consultUser } from "../repositories/index";
-import { conflictError, NotFoundError, UnauthoredError } from "../erros/erros";
+ 
+import * as allAddress from "../repositories";
+import { Andress } from "@/protocols";
+ 
+import { NotFoundError, UnauthoredError } from "../erros/erros";
 import { consultUserService } from "./consultUser.services";
 
 async function postAddressServices(andress: Andress): Promise<Andress> {

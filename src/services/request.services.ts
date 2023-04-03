@@ -1,5 +1,5 @@
 import { NotFoundError } from "../erros/erros";
-import { Requests } from "../protocols";
+import { Requests } from "@/protocols";
 import * as allRepositories from "../repositories";
 import { consultUserService } from "./consultUser.services";
 

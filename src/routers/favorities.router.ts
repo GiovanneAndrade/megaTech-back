@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   getFavoritiesController,
   postFavoritiesController,
-} from "../controllers/index";
+} from "../controllers";
 
 const favoritiesRouter = Router();
 favoritiesRouter

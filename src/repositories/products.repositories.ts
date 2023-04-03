@@ -29,26 +29,29 @@ async function getProductsRepository() {
   return result;
 }
 
-
 async function getProductsHotRepository() {
   const result = await prisma.products.findMany({
-    orderBy:{
-      price:"asc"
-    }
+    orderBy: {
+      price: "asc",
+    },
   });
 
   return result;
 }
 
-async function consultProductsHotRepository(productId:number) {
-const id= productId
- 
+async function consultProductsHotRepository(productId: number) {
+  const id = productId;
   const result = await prisma.products.findMany({
-    where:{
-      id:productId
-    }
+    where: {
+      id: productId,
+    },
   });
 
   return result;
 }
-export { getProductsRepository, getProductsHotRepository,consultProductsHotRepository };
+export {
+  getProductsRepository,
+  getProductsHotRepository,
+  consultProductsHotRepository,
+};
+ 

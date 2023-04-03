@@ -1,4 +1,4 @@
-import * as allAddress from "../repositories/index";
+import * as allAddress from "../repositories";
 
 async function getCategoryService() {
   const result = await allAddress.getCategoryRepository();

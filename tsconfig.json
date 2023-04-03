@@ -1,9 +1,53 @@
-{
+/*  {
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,
     "lib": ["esnext"],
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+     "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    },
+  },
+  "plugins": [
+    {
+      "transform": "typescript-transform-paths"
+    }
+  ],
+  
+} 
+  */
+
+  {
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "tests"
+  ]
 }

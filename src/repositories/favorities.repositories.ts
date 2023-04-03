@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { Favorities } from "../protocols";
+import { Favorities } from "@/protocols";
 
 const prisma = new PrismaClient();
 

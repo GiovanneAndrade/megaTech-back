@@ -1,4 +1,4 @@
-import * as allProducts from "../repositories/index";
+import * as allProducts from "../repositories";
 
 
 async function getProductsService() {

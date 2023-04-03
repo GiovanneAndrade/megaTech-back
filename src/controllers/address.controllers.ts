@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import * as allAddressService from "../services";
-import { Andress } from "../protocols";
+import { Andress } from "@/protocols";
 import { 
   ifNotFoundError, InternalServerError,  ifUnauthoredError
 } from "../erros/erros";
@@ -28,7 +28,7 @@ async function getAddressController(req: Request, res: Response) {
 }
 
 async function deleteAddressController(req: Request, res: Response) {
-  const id = req.params.id;
+  const id = req.params.id as string;
 
   try {
     await allAddressService.deleteAddressServices(id);

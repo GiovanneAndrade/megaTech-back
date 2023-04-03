@@ -4,7 +4,7 @@ import {
   getAddressController,
   postAddressController,
   updateAddressController,
-} from "../controllers/index";
+} from "../controllers";
 
 const addressRouter = Router();
 addressRouter

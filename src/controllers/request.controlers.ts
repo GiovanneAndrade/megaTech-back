@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { ifNotFoundError, InternalServerError } from "../erros/erros";
-import { Requests } from "../protocols";
+import { Requests } from "@/protocols";
 import * as allRequest from "../services";
 
 async function postRequestController(req: Request, res: Response) {

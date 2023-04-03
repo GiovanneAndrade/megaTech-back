@@ -1,6 +1,6 @@
 import { NotFoundError } from "../erros/erros";
-import { Favorities } from "../protocols";
-import * as allFavorities from "../repositories/index";
+import { Favorities } from "@/protocols";
+import * as allFavorities from "../repositories";
 import { consultUserService } from "./consultUser.services";
 
 async function postFavoritiesService(favorities: Favorities) {

@@ -1,6 +1,6 @@
  
-import { User } from "../protocols";
-import * as allUsers from "../repositories/index";
+import { User } from "@/protocols";
+import * as allUsers from "../repositories";
 async function postUsersService( user:User) {
  
   const result = await allUsers.postUsersRepository(user);
