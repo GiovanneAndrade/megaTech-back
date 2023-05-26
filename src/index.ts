@@ -1,3 +1,5 @@
+/// <reference path="./express.d.ts" />
+
 import "express-async-errors";
 import cors from 'cors';
 import express from "express";
