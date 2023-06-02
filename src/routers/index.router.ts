@@ -6,15 +6,18 @@ import addressRouter from "../routers/address.router";
 import favoritiesRouter from "../routers/favorities.router";
 import resquestRouter from "../routers/request.router";
 import productsRouter from "../routers/products.router";
-
+import searchRouter from "./search.router";
 
 const router = Router();
+
+router.use(searchRouter);
 router.use(userRouter);
 router.use(categoriesRouter);
 router.use(addressRouter);
 router.use(favoritiesRouter);
 router.use(resquestRouter);
 router.use(productsRouter);
+
 router.use(handleApplicationErrors);
 
 export default router;
