@@ -15,9 +15,9 @@ async function postUsersService(user: User) {
 const secretKey = process.env.SECRET_KEY;
 async function postSigninService(email: string, password: string) {
   const user = await allUsers.getUserRepository(email);
-  if (!user) throw new NotFoundError("Usurario não Cadastrado");
+  if (!user) throw new NotFoundError("Email ou senha Invalido");
   if (!bcrypt.compareSync(password, user.password)) {
-    throw new NotFoundError("Senha incorreta.");
+    throw new NotFoundError("Email ou senha Invalido");
   }  
   const token = jwt.sign({ id: Number(user.id) }, secretKey);
   const session = await allUsers.getSessionsRepository(token, user.id);
