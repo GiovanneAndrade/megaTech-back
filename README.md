@@ -111,7 +111,7 @@ npm run dev
     "complement": "string",
     "userId": "number",
     "primary": true
-}
+  }
 ```
 
 ## ⚙️ Executando os testes
@@ -132,18 +132,15 @@ npm run test
 - supertest
 - Git
 
-## ✒️ Autores
+## ✒️ Autor
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-- **Um desenvolvedor** - _Trabalho Inicial_ - [umdesenvolvedor](https://github.com/linkParaPerfil)
-- **Fulano De Tal** - _Documentação_ - [fulanodetal](https://github.com/linkParaPerfil)
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+- **Giovanne Andrade** - [GiovanneAndrade](https://github.com/GiovanneAndrade)
 
 ## 🎁 Expressões de gratidão
 - Este projeto foi minha introdução ao Prisma e TypeScript e foi crucial para aprimorar minhas habilidades em projetos back-end. Através dele, aprendi a implementar recursos como autenticação de usuário e gerenciamento de banco de dados eficiente, testes com jest e supertestes, criando uma aplicação escalável e segura. Estou muito satisfeito com o resultado e confiante de que isso demonstra minhas habilidades como desenvolvedor de back-end.
 - Sou grato aos meus tutores e professores, bem como a toda equipe da Driven que participou desse processo. Eles foram essenciais para me guiar e me direcionar como uma bússola.
 - etc.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
