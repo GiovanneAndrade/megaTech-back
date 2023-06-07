@@ -10,8 +10,8 @@ async function postAddressServices( andress: Andress, userId:number): Promise<An
   return result;
 }
 
-async function getAddressServices() {
-  const result = await allAddress.getAddressRepository();
+async function getAddressServices(userId:number) {
+  const result = await allAddress.getAddressRepository(userId);
   return result;
 }
 
