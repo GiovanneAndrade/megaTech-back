@@ -26,13 +26,24 @@ async function deleteAddressServices(id: any, userId:number) {
   return result;
 }
 
-async function updateAddressServices( currentAddress:any, previousAddress: any) {
+async function updateAddressServices(
+  currentAddress: any,
+  previousAddress: any,
+  userId:number
+) {  
+  const consultCurrentAddress = await allAddress.consultAddressToUserIdRepository(
+     userId, currentAddress
+  );
+  const consultPreviousAddress = await allAddress.consultAddressToUserIdRepository(
+     userId, previousAddress
+  );
+  if (!consultCurrentAddress || !consultPreviousAddress)
+    throw new NotFoundError("Address não existe");
 
-  const consultCurrentAddress = await allAddress.consultAddressRepository( currentAddress );
-  const consultPreviousAddress = await allAddress.consultAddressRepository( previousAddress );
-  if (!consultCurrentAddress || !consultPreviousAddress) throw new NotFoundError("Address não existe");
-
-  const result = await allAddress.updateAddressRepository({currentAddress, previousAddress,});
+  const result = await allAddress.updateAddressRepository({
+    currentAddress,
+    previousAddress,
+  });
   return result;
 }
 
