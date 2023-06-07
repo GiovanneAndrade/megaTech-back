@@ -11,4 +11,10 @@ async function getProductsHotService() {
   return result;
 }
 
-export { getProductsService, getProductsHotService };
+async function updateStokeProductsService(productQuantity:any) {
+  const consultProductId = await allProducts.consultProductsHotRepository(productQuantity.productId);
+  const stoke =  Number(consultProductId[0].stoke) - productQuantity.quantity 
+  const result = await allProducts.updateStokeProductsRepository(productQuantity, stoke);
+  return result;
+}
+export { getProductsService, getProductsHotService, updateStokeProductsService };
