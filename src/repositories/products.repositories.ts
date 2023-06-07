@@ -38,6 +38,18 @@ async function getProductsHotRepository() {
 
   return result;
 }
+async function updateStokeProductsRepository(productQuantity:any, stoke:number) {
+  const result = await prisma.products.update({
+    where: {
+      id: Number(productQuantity.productId),
+    },
+    data: {
+      stoke: Number(stoke),
+    },
+  });
+
+  return result;
+}
 
 async function consultProductsHotRepository(productId: number) {
   const id = productId;
@@ -52,6 +64,6 @@ async function consultProductsHotRepository(productId: number) {
 export {
   getProductsRepository,
   getProductsHotRepository,
+  updateStokeProductsRepository,
   consultProductsHotRepository,
 };
- 
