@@ -15,11 +15,13 @@ async function getAddressServices(userId:number) {
   return result;
 }
 
-async function deleteAddressServices(id : any) {
-  const consultAddressById = await allAddress.consultAddressRepository( id );
+async function deleteAddressServices(id: any, userId:number) {
+  const consultAddressById = await allAddress.consultAddressToUserIdRepository(userId, id);
+ 
+ 
   if (!consultAddressById) throw new UnauthoredError("Address não existe");
 
-  const result = await allAddress.deleteAddressRepository( id );
+  const result = await allAddress.deleteAddressRepository(id);
 
   return result;
 }
