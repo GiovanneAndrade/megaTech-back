@@ -1,15 +1,14 @@
- 
 import * as allAddress from "../repositories";
-import { Andress } from "@/protocols";
- 
+import { Andress } from "../types";
+
 import { NotFoundError, UnauthoredError } from "../erros/erros";
 import { consultUserService } from "./consultUser.services";
 
-async function postAddressServices(andress: Andress): Promise<Andress> {
-  await consultUserService(andress.userId)
-  const result = await allAddress.postAddressRepository(andress);
+async function postAddressServices( andress: Andress, userId:number): Promise<Andress> {
+  await consultUserService(userId);
+  const result = await allAddress.postAddressRepository(andress, userId);
   return result;
-} 
+}
 
 async function getAddressServices() {
   const result = await allAddress.getAddressRepository();
