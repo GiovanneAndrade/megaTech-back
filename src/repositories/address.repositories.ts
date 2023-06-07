@@ -49,7 +49,16 @@ async function getAddressRepository(userId:number) {
     },
   });
 }
-
+async function consultAddressToUserIdRepository(userId:number,addressId: any) {
+  return await prisma.address.findFirst({
+    where: {
+      AND: [
+        { userId: userId },
+        { id: Number(addressId) }
+      ]
+    },
+  });
+}
 async function consultAddressRepository(id: any) {
   return await prisma.address.findFirst({
     where: {
@@ -94,6 +103,7 @@ async function updateAddressRepository({
 }
 export {
   postAddressRepository,
+  consultAddressToUserIdRepository,
   getAddressRepository,
   deleteAddressRepository,
   updateAddressRepository,
