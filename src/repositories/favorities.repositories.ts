@@ -52,10 +52,23 @@ async function getFavoritiesRepository(userId: number) {
   });
   return result;
 }
+async function consultFavoritiesRepository(favoritieId: number) {
+  const result = await prisma.favorities.findFirst({
+    where: {
+      id: Number(favoritieId),
+    },
+    include: {
+      products: true,
+      user: true,
+    },
+  });
+  return result;
+}
 
 export {
   postFavoritiesRepository,
   getFavoritiesRepository,
   postFavoritiesCreateRepository,
-  removeFavoritiesRepository
+  removeFavoritiesRepository,
+  consultFavoritiesRepository,
 };
