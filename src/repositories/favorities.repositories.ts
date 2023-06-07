@@ -10,14 +10,14 @@ async function postFavoritiesRepository(favorities: Favorities) {
     },
     data: {
       products: {
-        connect: favorities.productId 
+        connect: favorities.productId,
       },
     },
   });
   return result;
 }
 
-async function postFavoritiesCreateRepository( user: number ) {
+async function postFavoritiesCreateRepository(user: number) {
   const order = await prisma.favorities.create({
     data: {
       userId: user,
@@ -33,7 +33,7 @@ async function removeFavoritiesRepository(favorities: Favorities) {
     },
     data: {
       products: {
-        disconnect: favorities.productId 
+        disconnect: favorities.productId,
       },
     },
   });
@@ -41,7 +41,7 @@ async function removeFavoritiesRepository(favorities: Favorities) {
   return result;
 }
 
-async function getFavoritiesRepository(userId:number) {
+async function getFavoritiesRepository(userId: number) {
   const result = await prisma.favorities.findMany({
     where: {
       userId: userId,
