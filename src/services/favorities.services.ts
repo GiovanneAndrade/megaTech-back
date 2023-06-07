@@ -43,10 +43,14 @@ async function postRemoveFavoritiesService(favorities: Favorities, userId: numbe
 }
 
 async function getFavoritiesService(userId: number) {
-  await consultUserService(userId)
+  await consultUserService(userId);
 
   const result = await allFavorities.getFavoritiesRepository(userId);
   return result;
 }
 
-export { getFavoritiesService, postFavoritiesService };
+export {
+  getFavoritiesService,
+  postFavoritiesService,
+  postRemoveFavoritiesService,
+};
