@@ -5,5 +5,6 @@ export type Requests = {
   message: string;
   addressId: number;
   products: Array<Product>;
+  productQuantities:any[];
   userId: number;
 };
