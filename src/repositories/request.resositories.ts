@@ -1,15 +1,18 @@
 import { PrismaClient } from "@prisma/client";
-import { Requests } from "@/protocols";
+import { Requests } from "../types";
 
 const prisma = new PrismaClient();
 
-async function postRequestRepository(lastRequest:Requests) {
+async function postRequestRepository(lastRequest: Requests) {
   const result = await prisma.requests.create({
     data: {
       total: lastRequest.total,
       message: lastRequest.message,
       addressId: lastRequest.addressId,
       userId: lastRequest.userId,
+      payment: "CREDCARD",
+      deliveryType: "STANDARD",
+      orderStatus: "IN_ANALYSIS",
       products: {
         connect: lastRequest.products,
       },
