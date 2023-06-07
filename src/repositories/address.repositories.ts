@@ -1,9 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-import { Andress } from "../protocols/address.protocols";
+import { Andress } from "../types/address.protocols";
 
 const prisma = new PrismaClient();
 
-async function postAddressRepository(andress: Andress): Promise<Andress> {
+async function postAddressRepository(andress: Andress, userId:number): Promise<Andress> {
   return await prisma.address.create({
     data: {
       cep: Number(andress.cep),
