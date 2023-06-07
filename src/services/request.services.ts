@@ -1,6 +1,7 @@
 import { NotFoundError } from "../erros/erros";
 import { Requests } from "../types";
 import * as allRepositories from "../repositories";
+import * as allServices from "../services";
 import { consultUserService } from "./consultUser.services";
 import cron from "node-cron";
 import dayjs from "dayjs";
@@ -48,9 +49,21 @@ console.log(consultAddress)
   return {...request, result};
 }
 
-  const result = await allRepositories.postRequestRepository(lastRequest);
-  return result;
-}
+cron.schedule("00 12 * * *", () => {
+  (async () => {
+    const result = await allRepositories.checkStatusRepository();
+    result.forEach(async (item) => {
+      const formattedCreatedAt = dayjs(item.created_at).format("YYYY-MM-DD");
+      const InAnalysis = dayjs().diff(formattedCreatedAt, "day");
+
+      if (InAnalysis > 0 && InAnalysis <= 5) {
+        await allRepositories.UpdateStatusRepository(item.id, "IN_TRANSIT");
+      } else {
+        await allRepositories.UpdateStatusRepository(item.id, "DELIVERED");
+      }
+    });
+  })();
+});
 
 async function getRequestService(id: number) {
   await consultUserService(id);
