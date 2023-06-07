@@ -16,15 +16,18 @@ async function postAddressRepository(andress: Andress, userId:number): Promise<A
       complement: andress.complement,
       user: {
         connect: {
-          id: andress.userId,
+          id: Number(userId),
         },
       },
     },
   });
 }
 
-async function getAddressRepository() {
+async function getAddressRepository(userId:number) {
   return await prisma.address.findMany({
+    where:{
+      userId:Number(userId)
+    },
     select: {
       id: true,
       address: true,
