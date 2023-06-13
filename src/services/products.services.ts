@@ -22,10 +22,16 @@ async function updateStokeProductsService(productQuantity: any) {
   return result; 
 } 
 
+async function updateHistotyService(newPrice: number, productId:number) {
+  const previousPrice = await allProducts.consultProductsHotRepository(productId);
+  const priceHistoty = await allProducts.priceHistotyRepository( newPrice, previousPrice[0].price, productId);
+  const updateProduct = await allProducts.updateHistotyRepository(newPrice, productId);
  
+  return {...updateProduct, previousPrice:priceHistoty.previousPrice};
+}
 export {
   getProductsService,
   getProductsHotService,
   updateStokeProductsService,
- 
+  updateHistotyService,
 };
