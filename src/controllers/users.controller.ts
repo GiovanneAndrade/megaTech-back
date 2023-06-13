@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
 import * as allUsers from "../services";
-
-import { InternalServerError } from "../erros/erros";
-import { User } from "../protocols";
+import { InternalServerError, ifNotFoundError } from "../erros/erros";
+import { User } from "../types";
 
 async function postUsersController(req: Request, res: Response) {
   const user = req.body as User;
@@ -15,4 +14,16 @@ async function postUsersController(req: Request, res: Response) {
   }
 }
 
-export { postUsersController };
+async function postSigninController(req: Request, res: Response) {
+  const { email, password } = req.body;
+  
+  try {
+    const result = await allUsers.postSigninService(email, password);
+    return res.json( result );
+  } catch (error: any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
+    return InternalServerError(res);
+  }
+}
+
+export { postUsersController, postSigninController };
