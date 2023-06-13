@@ -38,7 +38,10 @@ async function getProductsHotRepository() {
 
   return result;
 }
-async function updateStokeProductsRepository(productQuantity:any, stoke:number) {
+async function updateStokeProductsRepository(
+  productQuantity: any,
+  stoke: number
+) {
   const result = await prisma.products.update({
     where: {
       id: Number(productQuantity.productId),
@@ -61,9 +64,47 @@ async function consultProductsHotRepository(productId: number) {
 
   return result;
 }
+
+async function updateHistoricRepository(newPrice: number, productId: number) {
+  const result = await prisma.products.update({
+    where: {
+      id: Number(productId),
+    },
+    data: {
+      price: Number(newPrice),
+    },
+  });
+
+  return result;
+}
+
+async function priceHistoricRepository(
+  newPrice: number,
+  previousPrice: any,
+  productId: number
+) {
+  const result = await prisma.priceHistory.upsert({
+    where: {
+      id: 1,
+    },
+    update: {
+      newPrice: Number(newPrice),
+      previousPrice: Number(previousPrice),
+    },
+    create: {
+      previousPrice: Number(previousPrice),
+      productId: Number(productId),
+      newPrice: Number(newPrice),
+    },
+  });
+
+  return result;
+}
 export {
   getProductsRepository,
   getProductsHotRepository,
   updateStokeProductsRepository,
   consultProductsHotRepository,
+  priceHistoricRepository,
+  updateHistoricRepository,
 };
