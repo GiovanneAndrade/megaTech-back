@@ -5,4 +5,9 @@ async function getCategoryService() {
   return result;
 }
 
-export { getCategoryService };
+async function getPageCategoryService(page:any, categoryId:any) {
+  
+  const result = await allAddress.getPageCategoryRepository(page, categoryId);
+  return result;
+}
+export { getCategoryService, getPageCategoryService };
