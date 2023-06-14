@@ -45,7 +45,6 @@ model Category {
 model Products {
   id              Int               @id @default(autoincrement())
   name            String            @unique
-  image           String
   price           Decimal
   description     String
   Assessments     String
@@ -55,8 +54,18 @@ model Products {
   stoke           Decimal?
   ProductQuantity ProductQuantity[]
   PriceHistory    PriceHistory[]
+  images          ProductImage[]
 
   @@map("product")
+}
+
+model ProductImage {
+  id        Int      @id @default(autoincrement())
+  url       String
+  product   Products @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("product_image")
 }
 
 model Favorities {
