@@ -12,7 +12,7 @@ async function getCategoryRepository(  ) {
       products: {
         select:{
           id: true,
-          image:true,
+          images:true,
           name:true,
           price:true,
           stoke:true,
@@ -46,7 +46,7 @@ async function getPageCategoryRepository (page:any,categoryId:any) {
       products: {
         select:{
           id: true,
-          image:true,
+          images:true,
           name:true,
           price:true,
           stoke:true,

@@ -15,7 +15,7 @@ async function getProductsRepository() {
       id: true,
       name: true,
       price: true,
-      image: true,
+      images: true,
       description: true,
       Assessments: true,
       _count: {

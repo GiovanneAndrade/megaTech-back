@@ -22,7 +22,7 @@ async function postSearchRepository(term: string) {
     },
     select: {
       id: true,
-      image: true,
+      images: true,
       name: true,
       price: true,
       stoke: true,

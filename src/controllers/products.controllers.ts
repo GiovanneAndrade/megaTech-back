@@ -3,7 +3,6 @@ import { InternalServerError } from "../erros/erros";
 import * as allProducts from "../services";
 
 async function getProductsController(req: Request, res: Response) {
-  const userId = req.user.userId;
 
   try {
     const result = await allProducts.getProductsService();
