@@ -6,7 +6,13 @@ const prisma = new PrismaClient();
 
 async function seed() {
   try {
-    await prisma.products.deleteMany();
+    await prisma.priceHistory.deleteMany();
+    await prisma.productQuantity.deleteMany(); 
+    await prisma.products.deleteMany();  
+    await prisma.category.deleteMany();  
+    await prisma.productImage.deleteMany(); 
+    await prisma.favorities.deleteMany(); 
+ 
     const filePath = path.join(__dirname, "dados.json");
     const data = await fs.readFile(filePath, "utf8");
     const categoriesProducts = JSON.parse(data);
@@ -22,10 +28,9 @@ async function seed() {
       });
 
       for (const product of products) {
-        await prisma.products.create({
+        const createdProduct = await prisma.products.create({
           data: {
             name: product.name,
-            image: product.image,
             price: product.price,
             description: product.description,
             Assessments: product.Assessments,
