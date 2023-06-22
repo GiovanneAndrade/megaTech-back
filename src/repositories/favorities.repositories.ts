@@ -47,7 +47,20 @@ async function getFavoritiesRepository(userId: number) {
       userId: userId,
     },
     select: {
-      products: true,
+      products: {
+        select: {
+          id: true,
+          name: true,
+          images: true,
+          category: true,
+          price: true,
+          description: true,
+          Assessments: true,
+          stoke: true,
+          PriceHistory: true,
+          ProductQuantity: true,
+        },
+      },
     },
   });
   return result;
