@@ -60,6 +60,18 @@ async function consultProductsHotRepository(productId: number) {
     where: {
       id: productId,
     },
+    select: {
+      id: true,
+      category: true,
+      stoke: true,
+      price: true,
+      name: true,
+      PriceHistory: true,
+      images: true,
+      Assessments: true,
+      description: true,
+      ProductQuantity: true,
+    },
   });
 
   return result;
