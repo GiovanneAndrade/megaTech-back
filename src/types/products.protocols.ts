@@ -4,6 +4,18 @@ export type Product =
   }
 ;
 
- 
+export type Products = {
+  name: string;
+  price: string;
+  images: string[];
+  description: string;
+};
+
+export type CategoryProduct = {
+  name: string;
+  image: string;
+  products: Products[];
+};
+
 
 
