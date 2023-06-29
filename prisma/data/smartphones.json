@@ -1,0 +1,204 @@
+[
+  {
+    "name": "smartphones",
+    "image": "",
+    "products": [
+      {
+        "name": "Apple iPhone SE (2a geração) 64 GB - (PRODUCT)RED",
+        "price": "2.019",
+        "seller": "DROPCELL.RJ",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_704899-MLA47681022777_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_933717-MLA47681043248_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_779889-MLA47681043252_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_644487-MLA47681022785_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_685419-MLA47681022787_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_654665-MLA47681022790_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_746290-MLA47681043255_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_711922-MLA47681019845_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_779889-MLA47681043252_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_854527-MLA47681019813_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_824154-MLA47681019798_092021-R.webp"
+        ],
+        "description": "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos. Modo Retrato para você fazer fotos com qualidade de estúdio e seis efeitos de iluminação. Nova geração do HDR Inteligente, que revela detalhes surpreendentes em luzes e sombras. E vídeo 4K com qualidade de cinema. Ele ainda tem todos os recursos avançados do iOS, bateria de longa duração (2) e é resistente à água (3). Tudo o que você adora no iPhone, a"
+      },
+      {
+        "name": "Apple iPhone 12 Pro (128 GB) - Prateado",
+        "price": "4.500",
+        "seller": "ALE.FERRAZ_",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_715609-MLU69495828229_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_772785-MLU69495818723_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_944040-MLU69483295284_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_875056-MLU69495818737_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_752862-MLU69483295290_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_932341-MLU69483141544_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_974249-MLU69495818763_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_757603-MLU69495867577_052023-R.webp"
+        ],
+        "description": "iPhone 12 Pro. 5G para baixar arquivos enormes em qualquer lugar e fazer streaming de vídeos HDR (1). Tela Super Retina XDR brilhante de 6,1 polegadas (2). Ceramic Shield, que é quatro vezes mais resistente a quedas (3). Fotos surpreendentes em pouca luz com o novo sistema de câmera Pro e alcance de zoom óptico de 4x.\nReprodução, edição e gravação de vídeos em Dolby Vision com qualidade de cinema. Retratos com modo Noite e experiências ainda melhores em realidade aumentada com o Scanner LiDAR. P"
+      },
+      {
+        "name": "Apple iPhone XR 64 GB - Branco",
+        "price": "1.659",
+        "seller": "JOTTAELETRÔNICOS",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_912095-MLA46545889147_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_702077-MLA46545885288_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_890959-MLA46545889152_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_835694-MLA46545885291_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_627443-MLA46545868417_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_666684-MLA46545868419_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_948098-MLA46545885428_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_732153-MLA46545868401_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_793142-MLA46545889177_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_912095-MLA46545889147_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_679349-MLA46545889159_062021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_932360-MLA46545868431_062021-R.webp"
+        ],
+        "description": "O iPhone XR tem tela Liquid Retina de 6,1 polegadas (2) e seis lindas cores.\nFace ID avançado para desbloquear o aparelho e acessar apps só com o olhar.\nChip A12 Bionic, que usa aprendizado de máquina em tempo real para transformar sua maneira de interagir com fotos, jogos, realidade aumentada e muito mais.\nSistema de câmera de 12 MP com modo Retrato, Iluminação de Retrato, efeito bokeh aperfeiçoado e Controle de Profundidade para retratos com qualidade de estúdio. Tudo em um design lindo e resi"
+      },
+      {
+        "name": "Apple iPhone XR 64 Gb - Branco ..de Vitrine ,garantia E Nf",
+        "price": "1.929",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_770036-MLB54984633598_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_648952-MLB69177973541_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_840947-MLB69173022476_052023-R.webp"
+        ],
+        "description": "(( PREZADO CLIENTE ATENÇÂO ; NÂO ENVIAMOS PARA ESTADOS DO :\n- ESPIRITO SANTO\n- SC SANTA CATARINA\n- MINAS GERAIS MG\n- BAHIA e PIAUI\n- RIO GRANDE DO SUL\n- CEARÁ\n- MARANHÂO\n- PERNAMBUCO e ALAGOAS )))\n\nATENÇÃO CLIENTE . AVISO IMPORTANTE , RECEBNDO O SEU IPHONE , NÃO TIRA A SELO DE SEGURANÇA\\GARANTIA QUE FICA LOCALIZADO O LADO DA ENTRADA DO CARREGADOR , PRA NÃO PERDER A GARANTIA\n\niPhone XR 64gb COR Branco\n\n\n- Celular original de vitrine! Sem nenhum detalhes\n\n\n\n*Promoções:*\n\n- Nossas promoções são por"
+      },
+      {
+        "name": "Apple iPhone XR 64 Gb - Branco .. Vitrine ,garantia 100%",
+        "price": "1.839",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_770036-MLB54984633598_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_648952-MLB69177973541_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_840947-MLB69173022476_052023-R.webp"
+        ],
+        "description": "((( PREZADO CLIENTE ATENÇÂO ; NÂO ENVIAMOS PARA ESTADOS DO :\n- ESPIRITO SANTO\n- SC SANTA CATARINA\n- MINAS GERAIS MG\n- BAHIA e PIAUI\n- RIO GRANDE DO SUL\n- CEARÁ\n- MARANHÂO\n- PERNAMBUCO e ALAGOAS\n- TOCANTINS )))\n\n\nATENÇÃO CLIENTE . AVISO IMPORTANTE , RECEBNDO O SEU IPHONE , NÃO TIRA A SELO DE SEGURANÇA\\GARANTIA QUE FICA LOCALIZADO O LADO DA ENTRADA DO CARREGADOR , PRA NÃO PERDER A GARANTIA\n\n\niPhone XR 64gb COR Branco\n\n\n- Celular original de vitrine , Novo sem uso .. Sem nenhum detalhes\n\n- Acompanh"
+      },
+      {
+        "name": "Apple iPhone SE (2a geração) 128 GB - Preto",
+        "price": "2.299",
+        "seller": "LSR DIGITAL",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_648713-MLA47681043259_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_638543-MLA47681022798_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_712609-MLA47681019849_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_812825-MLA47681019852_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_740849-MLA47681019854_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_982971-MLA47681022803_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_872214-MLA47681019861_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_749712-MLA47681022813_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_779889-MLA47681043252_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_854527-MLA47681019813_092021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_712609-MLA47681019849_092021-R.webp"
+        ],
+        "description": "O iPhone SE é o iPhone de 4,7 polegadas mais poderoso (1). Ele vem com o chip A13 Bionic para um desempenho surpreendente em apps, jogos e fotos. Modo Retrato para você fazer fotos com qualidade de estúdio e seis efeitos de iluminação. Nova geração do HDR Inteligente, que revela detalhes surpreendentes em luzes e sombras. E vídeo 4K com qualidade de cinema. Ele ainda tem todos os recursos avançados do iOS, bateria de longa duração (2) e é resistente à água (3). Tudo o que você adora no iPhone, a"
+      },
+      {
+        "name": "Apple iPhone XR 128gb .. De Vitrine Original C/nf E Garantia",
+        "price": "2.199",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_688997-MLB69515876651_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_968202-MLB69502966894_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_624466-MLB69502959752_052023-R.webp"
+        ],
+        "description": "(( PREZADO CLIENTE ATENÇÂO ; NÂO ENVIAMOS PARA ESTADOS DO :\n- ESPIRITO SANTO\n- SC SANTA CATARINA\n- MINAS GERAIS MG\n- BAHIA e PIAUI\n- RIO GRANDE DO SUL\n- CEARÁ\n- MARANHÂO\n- PERNAMBUCO e ALAGOAS\n- TOCANTINS )))\n\nATENÇÃO CLIENTE . AVISO IMPORTANTE , RECEBNDO O SEU IPHONE , NÃO TIRA A SELO DE SEGURANÇA\\GARANTIA QUE FICA LOCALIZADO O LADO DA ENTRADA DO CARREGADOR , PRA NÃO PERDER A GARANTIA\n\niPhone XR 128gb COR Branco\n\n\n- Celular original de vitrine , Novo sem Uso ... Sem nenhum detalhes .\n\n- Acompan"
+      },
+      {
+        "name": "iPhone 8 64 Gb Dourado Original Promoção Vitrine",
+        "price": "1.095",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_747206-MLA43694099471_102020-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_720194-MLA43694219090_102020-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_905438-MLA43694099467_102020-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_925719-MLA43694099468_102020-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_609513-MLA43694219091_102020-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_728120-MLA43694219092_102020-R.webp",
+          "https://img.youtube.com/vi/wupKCBkvraE/hqdefault.jpg"
+        ],
+        "description": "SOBRE O PRODUTO\n- Todos os modelos acompanham nota fiscal eletrônica.\n- Aparelhos de vitrines novos, e todos originais apple.\n- Produto, sem detalhes e com garantia de 3 meses.\n- Carregador original apple para não ter problemas.\n- Sem defeitos, a saúde da bateria é de 80 a 100%.\n- Acompanha a ferramenta do chip (Chavinha).\n- Não temos vínculo com a empresa Apple.\n- Não vai a caixa e fone pois são vitrines.\n- Brinde a capinha e película para todos.\n- Desbloqueado para todas operadoras.\n- Homologa"
+      },
+      {
+        "name": "Apple iPhone 11 Pro 256 Gb Original Promoção Vitrine",
+        "price": "3.284",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_671241-MLB69457570494_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_828374-MLB69457686124_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_776745-MLB69469805791_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_908503-MLB69457492582_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_657449-MLB69457402856_052023-R.webp",
+          "https://img.youtube.com/vi/M1sM16odiEA/hqdefault.jpg"
+        ],
+        "description": "SOBRE O PRODUTO\n- Todos os modelos acompanham nota fiscal eletrônica.\n- Aparelhos de vitrines novos, e todos originais apple.\n- Produto, sem detalhes e com garantia de 3 meses.\n- Carregador original apple para não ter problemas.\n- Sem defeitos, a saúde da bateria é de 90 a 100%.\n- Acompanha a ferramenta do chip (Chavinha).\n- Não temos vínculo com a empresa Apple.\n- Não vai a caixa e fone pois são vitrines.\n- Brinde a capinha e película para todos.\n- Desbloqueado para todas operadoras.\n- Homologa"
+      },
+      {
+        "name": "Apple iPhone 11 64gb - Roxo De Vitrine +nf E Garantia",
+        "price": "2.599",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_968628-MLB69627075082_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_795990-MLB69641477935_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_720456-MLB69641478097_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_750781-MLB69641184067_052023-R.webp"
+        ],
+        "description": "((( PREZADO CLIENTE ATENÇÂO ; NÂO ENVIAMOS PARA ESTADOS DO :\n- ESPIRITO SANTO\n- SC SANTA CATARINA\n- MINAS GERAIS MG\n- BAHIA e PIAUI\n- RIO GRANDE DO SUL\n- CEARÁ\n- MARANHÂO\n- PERNAMBUCO e ALAGOAS\n- TOCANTINS )))\n\n\nATENÇÃO CLIENTE . AVISO IMPORTANTE , RECEBNDO O SEU IPHONE , NÃO TIRA A SELO DE SEGURANÇA\\GARANTIA QUE FICA LOCALIZADO O LADO DA ENTRADA DO CARREGADOR , PRA NÃO PERDER A GARANTIA\n\niPhone 11 64gb COR ROXO\n\n- Acompanha cabo USB e uma caixa Personalizada de brinde\n\n\n- Celular original de vi"
+      },
+      {
+        "name": "Apple iPhone 13 (128 GB) - Meia-noite",
+        "price": "4.399",
+        "seller": "LITTLESHOP SCS",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_724537-MLU69497645389_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_786919-MLU69497675467_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_976863-MLU69497665385_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_732319-MLU69497695471_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_685492-MLU69497695479_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_653144-MLU69497625481_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_855985-MLU69497695493_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_767193-MLU69497675503_052023-R.webp"
+        ],
+        "description": "iPhone 13. O sistema de câmera dupla mais avançado em um iPhone. Chip A15 Bionic com velocidade\nimpressionante. Um grande salto em bateria. Projetado para durar. 5G ultrarrápido1. E tela Super Retina XDR\nmais brilhante.\n\nAvisos Legais\n(1)É preciso ter um plano de dados. 5G só está disponível em alguns países e por meio de determinadas operadoras. As velocidades variam de acordo com as condições e operadoras locais.\n(2)A tela tem bordas arredondadas que se ajustam ao design curvo do aparelho dent"
+      },
+      {
+        "name": "Apple iPhone 12 (128 GB) - Branco",
+        "price": "3.498",
+        "seller": "SITA6552274",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_634984-MLU69497007037_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_625342-MLU69484164706_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_819998-MLU69484192736_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_862585-MLU69497204719_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_629508-MLU69484192748_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_692293-MLU69484192752_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_933306-MLU69497007055_052023-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_691634-MLU69496911949_052023-R.webp"
+        ],
+        "description": "iPhone12. 5G para baixar filmes de onde estiver e fazer streaming de vídeo em alta qualidade (1). Tela Super Retina XDR brilhante de 6,1 polegadas (2). Ceramic Shield, que é quatro vezes mais resistente a quedas (3). Fotos surpreendentes em pouca luz com o modo Noite em todas as câmeras. Reprodução, edição e gravação de vídeos em Dolby Vision com qualidade de cinema. Poderoso chip A14 Bionic. E novos acessórios MagSafe com encaixe fácil e recarga sem fio mais rápida (4). A diversão vai começar.\n"
+      },
+      {
+        "name": "iPhone 6s 32 Gb Preto Lindo + Nota Fiscal + 10x Sem Juros (Recondicionado)",
+        "price": "688",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_882041-MLB51402120080_092022-R.webp"
+        ],
+        "description": "Iphone 6s 32gb vitrine ( exposicao )\n\n\n-Original Apple Com Garantia - Exposição -COM FRETE GRÁTIS PARA MAIORIA DOS ESTADOS\n\n\n\n\nDESCRIÇÃO DO PRODUTO:\n\n\n-Exposto por 12 meses.\n\n- Garantia 90 dias .\n\n- NÃO ACOMPANHA caixa ou qualquer acessorio original\n\n- brinde carregador hmaston\n\n- parcelamos 10x sem juros\n\n\n\n\nIMPORTANTE SABER:\n\n\n- NÃO possui defeitos, NEM tela trincada, pode conter marcas muito leves de manuseio ou pequena marca na lateral\n\n\n- PRODUTO ORIGINAL COM NRO DE IMEI PARA CONSULTA NA AN"
+      },
+      {
+        "name": "Apple iPhone 11 (64 Gb) - Preto Seminovo (Recondicionado)",
+        "price": "2.641",
+        "images": [
+          "https://http2.mlstatic.com/D_Q_NP_832687-MLA46114578406_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_873330-MLA46114620105_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_764016-MLA46114648009_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_877965-MLA46114620109_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_878075-MLA46114620111_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_725630-MLA46114648017_052021-R.webp",
+          "https://http2.mlstatic.com/D_Q_NP_793464-MLA46114620114_052021-R.webp"
+        ],
+        "description": "Se está a procura de um Smartphone com alto desempenho por um valor que cabe no seu bolso?\nEntão, chegou o momento de você conhecer os modelos disponibilizados pela SHOPEX, garantia de\nsatisfação ou o seu dinheiro de volta.\n\nProcedência deste produto:\nTodos os produtos vendidos pela nossa loja são originais com nota fiscal e de procedência legal.\nRecebemos de fornecedores autorizados pelas marcas, passando por uma equipe de especialistas\ntécnicos que analisam cada detalhe do aparelho e classific"
+      }
+    ]
+  }
+]
