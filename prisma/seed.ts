@@ -1,13 +1,15 @@
 import path from "path";
 import { PrismaClient } from "@prisma/client";
 import fs from "fs/promises";
+import { CategoryProduct } from "../src/types/index"
 
 const prisma = new PrismaClient();
 
-async function seedFile(filename:any) {
+async function seedFile(filename:string) {
   const filePath = path.join(__dirname, "data", filename);
   const data = await fs.readFile(filePath, "utf8");
-  const categoriesProducts = JSON.parse(data);
+  
+  const categoriesProducts: CategoryProduct[] = JSON.parse(data);
 
   for (const categoryProduct of categoriesProducts) {
     const { name, image, products } = categoryProduct;
