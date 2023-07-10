@@ -3,7 +3,16 @@ import { Favorities } from "../types";
 
 const prisma = new PrismaClient();
 
-
+async function postContactRepository(userId: number, requestId:number) {
+  const result = await prisma.contact.create({
+    data: {
+      message: "",
+      userId: userId,
+      requestId: 1,
+    },
+  });
+  return result;
+}
 
 async function getContactRepository(userId: number, requestId:number) {
   const order = await prisma.contact.findMany({
@@ -21,4 +30,4 @@ async function getContactRepository(userId: number, requestId:number) {
   return order;
 }
 
-export {  getContactRepository };
+export { postContactRepository, getContactRepository };
