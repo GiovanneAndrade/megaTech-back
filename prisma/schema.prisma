@@ -19,6 +19,7 @@ model User {
   requests   Requests[]
   address    Address[]
   Session    Session[]
+  Contact    Contact[]
 
   @@map("user")
 }
@@ -44,7 +45,7 @@ model Category {
 
 model Products {
   id              Int               @id @default(autoincrement())
-  name            String            
+  name            String
   price           Decimal
   description     String
   Assessments     String
@@ -91,6 +92,7 @@ model Requests {
   orderStatus       OrderStatus?
   payment           PaymentMethod?
   productQuantities ProductQuantity[]
+  Contact           Contact[]
 
   @@map("request")
 }
@@ -151,4 +153,16 @@ model Address {
   primary        Boolean?
 
   @@map("address")
+}
+
+model Contact {
+  id         Int      @id @default(autoincrement())
+  message    String
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int
+  request    Requests @relation(fields: [requestId], references: [id])
+  requestId  Int
+  created_at DateTime @default(now())
+
+  @@map("contact")
 }
