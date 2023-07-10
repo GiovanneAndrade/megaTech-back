@@ -7,7 +7,7 @@ import favoritiesRouter from "../routers/favorities.router";
 import resquestRouter from "../routers/request.router";
 import productsRouter from "../routers/products.router";
 import searchRouter from "./search.router";
-
+import contactRouter from "./contact.router"
 const router = Router();
 
 router.use(searchRouter);
@@ -17,6 +17,7 @@ router.use(addressRouter);
 router.use(favoritiesRouter);
 router.use(resquestRouter);
 router.use(productsRouter);
+router.use(contactRouter);
 
 router.use(handleApplicationErrors);
 
