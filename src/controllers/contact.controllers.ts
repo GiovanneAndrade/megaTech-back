@@ -7,7 +7,18 @@ import {
   ifUnauthoredError,
 } from "../erros/erros";
 
+async function getContactController(req: Request, res: Response) {
+  const userId = req.user.userId;
+  const requestId = req.params.requestId;
+  try {
+    const result = await allAddressService.getContactServices(Number(userId), Number(requestId));
+    return res.send(result);
+  } catch (error: any) {
+    if (error.statusCode === 404) return ifNotFoundError(res, error);
 
+    return InternalServerError(res);
+  }
+}
 
 async function postContactController(req: Request, res: Response) {
   const userId = req.user.userId;
@@ -22,4 +33,4 @@ async function postContactController(req: Request, res: Response) {
   }
 }
 
-export {  postContactController };
+export { getContactController, postContactController };
