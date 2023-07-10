@@ -15,6 +15,9 @@ async function postContactServices(userId: number, requestId: number) {
   return result;
 }
 
+async function getContactServices(userId: number, requestId: number) {
+  const result = await allRepositories.getContactRepository(userId, requestId);
+  return result;
+}
 
-
-export { postContactServices };
+export { postContactServices, getContactServices };
