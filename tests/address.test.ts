@@ -26,7 +26,7 @@ beforeAll(async () => {
   await prisma.category.deleteMany();
   await prisma.session.deleteMany();
 });
-
+const secretKey = process.env.SECRET_KEY;
 /* afterAll(async () => {
   await prisma.productQuantity.deleteMany();
   await prisma.priceHistory.deleteMany();
@@ -51,12 +51,13 @@ describe("test address GET", () => {
   });
 
   it("should respond with status 401 if given token is not valid", async () => {
-    const token = 'tokeninvalido'
+    const token = "tokeninvalido";
 
-    const response = await server.get("/address").set("Authorization", `Bearer ${token}`);
+    const response = await server
+      .get("/address")
+      .set("Authorization", `Bearer ${token}`);
     expect(response.status).toBe(401);
   });
-  
 
   it("buscar usuarios ", async () => {
     const secretKey = process.env.SECRET_KEY;
@@ -64,7 +65,28 @@ describe("test address GET", () => {
     const token = jwt.sign({ id: Number(user.id) }, secretKey);
     const session = await createSessionFactories(token, user.id);
     console.log(session);
-    const response = await server.get("/address").set("Authorization", `Bearer ${session.token}`);
+    const response = await server
+      .get("/address")
+      .set("Authorization", `Bearer ${session.token}`);
     expect(response.status).toBe(200);
   });
+});
+
+describe("test address Post", () => {
+  it("should respond with status 401 if no token is given", async () => {
+    const response = await server.get("/address");
+
+    expect(response.status).toBe(401);
+  });
+
+  it("should respond with status 401 if given token is not valid", async () => {
+    const token = "tokeninvalido";
+
+    const response = await server
+      .get("/address")
+      .set("Authorization", `Bearer ${token}`);
+    expect(response.status).toBe(401);
+  });
+
+  
 });
