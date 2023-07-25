@@ -88,5 +88,16 @@ describe("test address Post", () => {
     expect(response.status).toBe(401);
   });
 
+  it("Address Submission Test - Success  ", async () => {
+    const user = await createUserFactories();
+    const token = jwt.sign({ id: Number(user.id) }, secretKey);
+    const session = await createSessionFactories(token, user.id);
+    const address = await addressFactories(user.id)
   
+    const response = await server
+      .post("/address")
+      .set("Authorization", `Bearer ${session.token}`)
+      .send(address);
+    expect(response.status).toBe(200);
+  });
 });
