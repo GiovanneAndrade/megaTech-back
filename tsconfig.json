@@ -30,6 +30,7 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "esModuleInterop": true,
+      "resolveJsonModule": true,
       "rootDirs": [
         "src",
         "tests"
