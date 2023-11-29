@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import * as allAddressService from "../services";
-import { Andress } from "../types";
+import * as allAddressService from "@/services";
+import { Andress } from "@/types";
 import {
   ifNotFoundError,
   InternalServerError,
   ifUnauthoredError,
-} from "../erros/erros";
+} from "@/erros/erros";
 
 async function postAddressController(req: Request, res: Response) {
   const newAddress = req.body as Andress;

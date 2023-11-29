@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { ifNotFoundError, InternalServerError } from "../erros/erros";
-import { Favorities } from "../types";
-import * as allFavorities from "../services";
+import { ifNotFoundError, InternalServerError } from "@/erros/erros";
+import { Favorities } from "@/types";
+import * as allFavorities from "@/services";
 
 async function postFavoritiesController(req: Request, res: Response) {
   const favorities = req.body as Favorities;

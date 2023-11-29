@@ -3,8 +3,8 @@ import {
   getFavoritiesController,
   postFavoritiesController,
   putRemoveFavoritiesController,
-} from "../controllers";
-import { verifyToken } from "../middlewares/authentication";
+} from "@/controllers";
+import { verifyToken } from "@/middlewares/authentication";
 
 const favoritiesRouter = Router();
 favoritiesRouter

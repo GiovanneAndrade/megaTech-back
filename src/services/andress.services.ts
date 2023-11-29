@@ -1,8 +1,8 @@
-import * as allAddress from "../repositories";
-import { Andress } from "../types";
+import * as allAddress from "@/repositories";
+import { Andress } from "@/types";
 
-import { NotFoundError, UnauthoredError } from "../erros/erros";
-import { consultUserService } from "./consultUser.services";
+import { NotFoundError, UnauthoredError } from "@/erros/erros";
+import { consultUserService } from "@/services";
 
 async function postAddressServices( andress: Andress, userId:number): Promise<Andress> {
   await consultUserService(userId);

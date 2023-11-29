@@ -1,7 +1,7 @@
 import { Router } from "express";
  
-import { verifyToken } from "../middlewares/authentication";
-import { getContactController, postContactController } from "../controllers/contact.controllers";
+import { verifyToken } from "@/middlewares/authentication";
+import { getContactController, postContactController } from "@/controllers";
 
 const contactRouter = Router();
 contactRouter

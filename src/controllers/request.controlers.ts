@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { ifNotFoundError, InternalServerError } from "../erros/erros";
-import { Requests } from "../types";
-import * as allRequest from "../services";
+import { ifNotFoundError, InternalServerError } from "@/erros/erros";
+import { Requests } from "@/types";
+import * as allRequest from "@/services";
 
 async function postRequestController(req: Request, res: Response) {
   const lastRequest = req.body as Requests;

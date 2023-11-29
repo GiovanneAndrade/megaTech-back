@@ -3,7 +3,7 @@ import {
   getProductsController,
   getProductsHotController,
   updateProductsHotController,
-} from "../controllers";
+} from "@/controllers";
 
 const productsRouter = Router();
 productsRouter

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { postSearchController } from "../controllers";
+import { postSearchController } from "@/controllers";
  
  
 

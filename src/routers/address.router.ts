@@ -4,11 +4,12 @@ import {
   getAddressController,
   postAddressController,
   updateAddressController,
-} from "../controllers";
-import { verifyToken } from "../middlewares/authentication";
+} from "@/controllers";
+import { verifyToken } from "@/middlewares/authentication";
 
 const addressRouter = Router();
 addressRouter
+
   .all("/*", verifyToken)
   .post("/address", postAddressController)
   .get("/address", getAddressController)

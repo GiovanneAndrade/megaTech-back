@@ -3,8 +3,8 @@ import {
   getAllRequestController,
   getRequestController,
   postRequestController,
-} from "../controllers";
-import { verifyToken } from "../middlewares/authentication";
+} from "@/controllers";
+import { verifyToken } from "@/middlewares/authentication";
 
 const resquestRouter = Router();
 resquestRouter

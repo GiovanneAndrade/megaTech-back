@@ -1,8 +1,8 @@
-import * as allRepositories from "../repositories";
-import { Andress } from "../types";
+import * as allRepositories from "@/repositories";
+import { Andress } from "@/types";
 
-import { NotFoundError, UnauthoredError } from "../erros/erros";
-import { consultUserService } from "./consultUser.services";
+import { NotFoundError, UnauthoredError } from "@/erros/erros";
+import { consultUserService } from "@/services";
 
 async function postContactServices(userId: number, requestId: number) {
   const resquest = await allRepositories.checkRequestRepository(requestId);

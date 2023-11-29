@@ -3,7 +3,7 @@
 import "express-async-errors";
 import cors from 'cors';
 import express from "express";
-import router from "./routers/index.router";
+import router from "@/routers/index.router";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from "../swagger.json";
 
