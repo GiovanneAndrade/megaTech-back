@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import * as allUsers from "../services";
+import * as allUsers from "@/services";
 import { InternalServerError, ifNotFoundError } from "../erros/erros";
-import { User } from "../types";
+import { User } from "@/types";
 
 async function postUsersController(req: Request, res: Response) {
   const user = req.body as User;

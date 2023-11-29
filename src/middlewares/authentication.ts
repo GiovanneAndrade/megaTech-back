@@ -1,4 +1,4 @@
-import prisma from "../db/databaseConnection";
+import prisma from "@/db/databaseConnection";
 import jwt from "jsonwebtoken";
 import { NextFunction, Request, Response } from "express";
 const secretKey: string = process.env.SECRET_KEY!;

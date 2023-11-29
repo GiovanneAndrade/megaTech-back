@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import * as allUsers from "../services";
-import { InternalServerError, ifNotFoundError } from "../erros/erros";
+import * as allUsers from "@/services";
+import { InternalServerError, ifNotFoundError } from "@/erros/erros";
 
 
 interface SearchQuery {

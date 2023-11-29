@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { Requests } from "../types";
+import { Requests } from "@/types";
 
 const prisma = new PrismaClient();
 
@@ -22,7 +22,6 @@ async function postRequestRepository(lastRequest: Requests) {
 }
 
 async function postQuantityRepository(updatedProductQuantities: any) {
-
   const result = await prisma.productQuantity.create({
     data: {
       productId: Number(updatedProductQuantities.productId),
@@ -30,7 +29,6 @@ async function postQuantityRepository(updatedProductQuantities: any) {
       requestId: Number(updatedProductQuantities.requestId),
     },
   });
-  console.log(result);
   return result;
 }
 
@@ -56,6 +54,18 @@ async function checkStatusRepository() {
     },
   });
 
+  return result;
+}
+async function checkRequestRepository(requestId: number) {
+ 
+  const result = await prisma.requests.findFirst({
+    where: {
+      id: Number(requestId),
+    },
+   
+ 
+  });
+ 
   return result;
 }
 async function UpdateStatusRepository(requestId: number, status: any) {
@@ -105,6 +115,7 @@ export {
   getRequestRepository,
   getAllRequestRepository,
   checkStatusRepository,
+  checkRequestRepository,
   UpdateStatusRepository,
   postQuantityRepository,
 };

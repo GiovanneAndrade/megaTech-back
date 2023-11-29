@@ -1,8 +1,8 @@
-import { User } from "../types";
-import * as allUsers from "../repositories";
+import { User } from "@/types";
+import * as allUsers from "@/repositories";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { NotFoundError } from "../erros/erros";
+import { NotFoundError } from "@/erros/erros";
  
  
 async function postUsersService(user: User) {

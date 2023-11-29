@@ -1,7 +1,7 @@
-import { NotFoundError } from "../erros/erros";
-import { Favorities } from "../types";
-import * as allFavorities from "../repositories";
-import { consultUserService } from "./consultUser.services";
+import { NotFoundError } from "@/erros/erros";
+import { Favorities } from "@/types";
+import * as allFavorities from "@/repositories";
+import { consultUserService } from "@/services";
 
 async function postFavoritiesService(favorities: Favorities, userId: number) {
   console.log(favorities.userId, userId)

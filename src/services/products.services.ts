@@ -1,4 +1,4 @@
-import * as allProducts from "../repositories";
+import * as allProducts from "@/repositories";
 
 async function getProductsService() {
   const result = await allProducts.getProductsRepository();

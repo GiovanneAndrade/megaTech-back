@@ -1,8 +1,8 @@
-import { NotFoundError } from "../erros/erros";
-import { Requests } from "../types";
-import * as allRepositories from "../repositories";
-import * as allServices from "../services";
-import { consultUserService } from "./consultUser.services";
+import { NotFoundError } from "@/erros/erros";
+import { Requests } from "@/types";
+import * as allRepositories from "@/repositories";
+import * as allServices from "@/services";
+import { consultUserService } from "@/services";
 import cron from "node-cron";
 import dayjs from "dayjs";
 

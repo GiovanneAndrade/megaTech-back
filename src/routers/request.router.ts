@@ -1,16 +1,13 @@
 import { Router } from "express";
-import {
-  getAllRequestController,
-  getRequestController,
-  postRequestController,
-} from "../controllers";
-import { verifyToken } from "../middlewares/authentication";
+import * as allControllers from "@/controllers";
+import { verifyToken } from "@/middlewares/authentication";
 
 const resquestRouter = Router();
 resquestRouter
+
   .all("/*", verifyToken)
-  .post("/request", postRequestController)
-  .get("/request", getRequestController)
-  //.get("/request", getAllRequestController);
+  .post("/request", allControllers.postRequestController)
+  .get("/request", allControllers.getRequestController)
+  //.get("/request", allControllers.getAllRequestController);
 
 export default resquestRouter;

@@ -2,6 +2,31 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+async function postProduct() {
+  const result = await prisma.products.create({
+    data: {
+      name: "",
+      Assessments: "",
+      price: 1,
+      description: "",
+      stoke: 50,
+      category: {
+        create: {
+          name: "",
+          image: "",
+        },
+      },
+      images: {
+        create: {
+          url: "",
+        },
+      },
+    },
+  });
+
+  return result;
+}
+
 async function getProductsRepository() {
   const result = await prisma.products.findMany({
     orderBy: [

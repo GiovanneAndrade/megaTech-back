@@ -11,14 +11,12 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 De que coisas você precisa para instalar o software e como instalá-lo?
 
 ```
-Para usar o aplicativo, é necessário ter o Node.js instalado. Clone o repositório e instale as dependências com o seguinte comando
+Para usar o aplicativo, é necessário ter o Node.js instalado. Clone o repositório e instale as dependências.
 ```
 
 ### 🔧 Instalação
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
 
 ```
 npm install

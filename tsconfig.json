@@ -1,28 +1,5 @@
-/*  {
+{
   "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "lib": ["esnext"],
-    "esModuleInterop": true,
-     "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "*"
-      ]
-    },
-  },
-  "plugins": [
-    {
-      "transform": "typescript-transform-paths"
-    }
-  ],
-  
-} 
-  */
- 
-  {
-    "compilerOptions": {
       "target": "es2020",
       "module": "commonjs",
       "outDir": "dist",
@@ -30,33 +7,22 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "esModuleInterop": true,
-      "rootDirs": [
-        "src",
-        "tests"
-      ]
-    },
-    "ts-node": {
-      "esm": true
-    },
-    "include": [
-      "src",
-      "tests"
-    ]
-  }
-  
-
-
-/*   {
-    "compilerOptions": {
-      "outDir": "dist",
-      "esModuleInterop": true,
-      "module": "CommonJS",
+      "resolveJsonModule": true,
       "moduleResolution": "Node",
-      "resolveJsonModule": true
-    },
-    "ts-node": {
-      "esm": true
-    }
-  } */
-  
-  
+      "baseUrl": ".",
+      "paths": {
+          "@/*": ["src/*"]
+      },
+      "plugins": [
+          {
+              "transform": "typescript-transform-paths"
+          }
+      ],
+      "rootDirs": ["src", "tests"]
+  },
+  "ts-node": {
+      "transpileOnly": true,
+      "require": ["typescript-transform-paths/register"]
+  },
+  "include": ["src", "tests"]
+}

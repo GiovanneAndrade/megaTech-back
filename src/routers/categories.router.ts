@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { getCategoryController, getPageCategoryController } from "../controllers/index";
+import * as allControllers from "@/controllers";
 
 const categoriesRouter = Router();
 categoriesRouter
-.get("/categories", getCategoryController)
-.get("/categories/page", getPageCategoryController);
+
+  .get("/categories", allControllers.getCategoryController)
+  .get("/categories/page", allControllers.getPageCategoryController);
+
 export default categoriesRouter;

@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { Andress } from "../types/address.protocols";
+import { Andress } from "@/types/address.protocols";
 
 const prisma = new PrismaClient();
 
