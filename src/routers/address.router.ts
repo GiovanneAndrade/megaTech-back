@@ -1,19 +1,14 @@
 import { Router } from "express";
-import {
-  deleteAddressController,
-  getAddressController,
-  postAddressController,
-  updateAddressController,
-} from "@/controllers";
+import * as allControllers from "@/controllers";
 import { verifyToken } from "@/middlewares/authentication";
 
 const addressRouter = Router();
 addressRouter
 
   .all("/*", verifyToken)
-  .post("/address", postAddressController)
-  .get("/address", getAddressController)
-  .delete("/address/:id", deleteAddressController)
-  .put("/address/:currentAddress/:previousAddress", updateAddressController);
+  .post("/address", allControllers.postAddressController)
+  .get("/address", allControllers.getAddressController)
+  .delete("/address/:id", allControllers.deleteAddressController)
+  .put("/address/:currentAddress/:previousAddress", allControllers.updateAddressController);
 
 export default addressRouter;

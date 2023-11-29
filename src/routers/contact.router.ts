@@ -1,12 +1,13 @@
 import { Router } from "express";
  
 import { verifyToken } from "@/middlewares/authentication";
-import { getContactController, postContactController } from "@/controllers";
+import * as allControllers from "@/controllers";
 
 const contactRouter = Router();
 contactRouter
+
   .all("/*", verifyToken)
-  .post("/contact", postContactController)
-  .get("/contact", getContactController);
+  .post("/contact", allControllers.postContactController)
+  .get("/contact", allControllers.getContactController);
 
 export default contactRouter;

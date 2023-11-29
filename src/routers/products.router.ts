@@ -1,13 +1,12 @@
 import { Router } from "express";
-import {
-  getProductsController,
-  getProductsHotController,
-  updateProductsHotController,
-} from "@/controllers";
+import * as allControllers from "@/controllers";
 
 const productsRouter = Router();
 productsRouter
-  .get("/product", getProductsController)
-  .get("/product/hot", getProductsHotController)
-  .put("/product", updateProductsHotController)
+
+  .get("/product", allControllers.getProductsController)
+  .get("/product", allControllers.getProductsController)
+  .get("/product/hot", allControllers.getProductsHotController)
+  .put("/product", allControllers.updateProductsHotController);
+
 export default productsRouter;
