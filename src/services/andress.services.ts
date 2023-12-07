@@ -1,6 +1,5 @@
 import * as allAddress from "@/repositories";
 import { Andress } from "@/types";
-
 import { NotFoundError, UnauthoredError } from "@/erros/erros";
 import { consultUserService } from "@/services";
 

@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import * as allAddressService from "@/services";
-import { Andress } from "@/types";
 import {
   ifNotFoundError,
   InternalServerError,
