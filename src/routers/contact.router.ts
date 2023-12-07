@@ -1,5 +1,4 @@
 import { Router } from "express";
- 
 import { verifyToken } from "@/middlewares/authentication";
 import * as allControllers from "@/controllers";
 
