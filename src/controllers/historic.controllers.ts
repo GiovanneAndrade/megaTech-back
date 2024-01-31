@@ -1,9 +1,12 @@
 import { Request, Response } from "express";
 import * as AllServices from "../services";
+import { InternalServerError, ifNotFoundError } from "@/erros/erros";
 
 async function posthistoricController(req: Request, res: Response) {
+    const userId = req.user.userId;
+    const productsId = Number(req.params.productsId);
     try {
-        const result = await AllServices.postHistoricService();
+        const result = await AllServices.postHistoricService(userId, productsId);
         return res.json(result);
     } catch (error) {
         console.error(error);
@@ -12,12 +15,14 @@ async function posthistoricController(req: Request, res: Response) {
 }
 
 async function getHistoricController(req: Request, res: Response) {
+    const userId = req.user.userId;
     try {
-        const result = await AllServices.getHistoricService();
+        const result = await AllServices.getHistoricService(userId);
         return res.json(result);
     } catch (error) {
-        console.error(error);
-        return res.sendStatus(500);
+        if (error.statusCode === 404) return ifNotFoundError(res, error);
+
+        return InternalServerError(res);
     }
 }
 
