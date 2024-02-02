@@ -1,8 +1,12 @@
 import { NotFoundError } from "@/erros/erros";
 import * as AllRepositories from "@/repositories";
 
-async function postHistoricService(userId:number,productsId:number) {
-    const result = await AllRepositories.postHistoricRepository(userId, productsId);
+async function postHistoricService(userId:number,productId:number) {
+    const consult = await AllRepositories.consultProductsHotRepository(productId);
+    if (!consult){
+        throw new NotFoundError("Produto não cadastrado");
+    }
+    const result = await AllRepositories.postHistoricRepository(userId, productId);
     return result;
 }
 
