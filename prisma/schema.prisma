@@ -20,6 +20,7 @@ model User {
   address    Address[]
   Session    Session[]
   Contact    Contact[]
+  Historic   Historic[]
 
   @@map("user")
 }
@@ -56,6 +57,7 @@ model Products {
   ProductQuantity ProductQuantity[]
   PriceHistory    PriceHistory[]
   images          ProductImage[]
+  Historic        Historic[]
 
   @@map("product")
 }
@@ -165,4 +167,15 @@ model Contact {
   created_at DateTime @default(now())
 
   @@map("contact")
+}
+
+model Historic {
+  id         Int      @id @default(autoincrement())
+  product    Products @relation(fields: [productsId], references: [id])
+  productsId Int
+  user       User     @relation(fields: [userId], references: [id])
+  userId     Int
+  created_at DateTime @default(now())
+
+  @@map("historic")
 }
