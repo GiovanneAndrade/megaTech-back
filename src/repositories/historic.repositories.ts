@@ -12,14 +12,17 @@ async function postHistoricRepository(userId: number, productsId: number) {
     return result;
 }
 
-async function getHistoricRepository(userId: number) {
+async function getHistoricRepository(userId: number, orderBy: 'asc' | 'desc' = 'desc') {
     const result = await prisma.historic.findMany({
         where: {
             userId: Number(userId),
         },
         include:{
           product:true
-        }
+        },
+       orderBy:{
+         created_at: orderBy
+       }
     });
     return result;
 }
