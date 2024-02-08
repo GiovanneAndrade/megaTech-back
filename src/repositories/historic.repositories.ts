@@ -6,7 +6,11 @@ async function postHistoricRepository(userId: number, productsId: number) {
     const result = await prisma.historic.create({
         data: {
             userId: Number(userId),
-            productsId: Number(productsId),
+            products:{
+                connect:[{
+                    id: Number(productsId)
+                }]
+            }
         },
     });
     return result;
