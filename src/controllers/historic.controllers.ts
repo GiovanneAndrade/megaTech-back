@@ -18,7 +18,8 @@ async function getHistoricController(req: Request, res: Response) {
     const userId = req.user.userId;
     try {
         const result = await AllServices.getHistoricService(userId);
-        return res.json(result);
+        const { products } = result[0];
+        return res.send(products);
     } catch (error) {
         if (error.statusCode === 404) return ifNotFoundError(res, error);
 
