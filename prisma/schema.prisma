@@ -170,12 +170,11 @@ model Contact {
 }
 
 model Historic {
-  id         Int      @id @default(autoincrement())
-  product    Products @relation(fields: [productsId], references: [id])
-  productsId Int
-  user       User     @relation(fields: [userId], references: [id])
+  id         Int        @id @default(autoincrement())
+  products   Products[]
+  user       User       @relation(fields: [userId], references: [id])
   userId     Int
-  created_at DateTime @default(now())
+  created_at DateTime   @default(now())
 
   @@map("historic")
 }
