@@ -6,7 +6,7 @@ const historicRouter = Router();
 historicRouter
 
   .all("/*", verifyToken)
-  .post("/historic", allControllers.posthistoricController)
+  .post("/historic/:productsId", allControllers.posthistoricController)
   .get("/historic", allControllers.getHistoricController);
 
 export default historicRouter;
